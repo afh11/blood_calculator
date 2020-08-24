@@ -3,12 +3,16 @@ def interface():
     while True: #Simple way of creating an endless loop
         print("Options for you")
         print("1 - HDL")
+        print("2 -LDL")
         print("9 - Quit")
         choice = input("Enter your choice: ")
         if choice=='9':
             return
         elif choice =='1':
             HDL_driver()
+            return
+        elif choice =='2':
+            LDL_driver()
             return
 def HDL_driver():
     # Get input
@@ -32,4 +36,26 @@ def check_HDL(HDL_result):
 def output_HDL(HDL_result, Interpretation):
     print("The HDL result is {}".format(HDL_result))
     print("That is {}".format(Interpretation))
+def LDL_driver():
+    #Get input
+    LDL_result = get_input_LDL()
+    #Interpret Input
+    LDL_Interp= check_LDL(LDL_result)
+    #Display results
+    output_LDL(LDL_result, LDL_Interp)
+def get_input_LDL():
+    LDL_input = input("Enter your LDL: ")
+    return int(LDL_input)
+def check_LDL(LDL_result):
+    if LDL_result < 130:
+        return "LDL is normal"
+    elif 130 <= LDL_result <= 159:
+        return "LDL is borderline High"
+    elif 160<= LDL_result <= 189:
+        return "LDL is High"
+    else:
+        return "LDL is very high"
+def output_LDL(LDL_result, LDL_Interp):
+    print("The LDL result is {}".format(LDL_result))
+    print("That is {}".format(LDL_Interp))
 interface()
