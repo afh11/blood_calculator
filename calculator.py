@@ -19,7 +19,7 @@ def HDL_driver():
     output_HDL(HDL_result, Interpretation)
 
 def get_input():
-    HDL_input = input("Enter your HDL")
+    HDL_input = input("Enter your HDL: ")
     return int(HDL_input)
 
 def check_HDL(HDL_result):
