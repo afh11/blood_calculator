@@ -10,6 +10,9 @@ def interface():
         elif choice =='1':
             HDL_driver()
             return
+        elif choice =='2'
+            LDL_driver()
+            return
 def HDL_driver():
     # Get input
     HDL_result = get_input()
@@ -32,4 +35,8 @@ def check_HDL(HDL_result):
 def output_HDL(HDL_result, Interpretation):
     print("The HDL result is {}".format(HDL_result))
     print("That is {}".format(Interpretation))
+def LDL_driver()
+    #Get input
+    #Interpret Input
+    #Display results
 interface()
