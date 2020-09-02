@@ -58,4 +58,5 @@ def check_LDL(LDL_result):
 def output_LDL(LDL_result, LDL_Interp):
     print("The LDL result is {}".format(LDL_result))
     print("That is {}".format(LDL_Interp))
-interface()
+if __name__ == "__main__":
+    interface()
